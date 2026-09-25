@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="The Nepal Himalayas — Authoritative mountain intelligence, 8,000m expedition dossiers, route telemetries, and direct 0% commission connection with certified native Sherpas and licensed Nepalese agencies." name="description"/>
+  <title>The Nepal Himalayas | Mountain Intel, Expeditions & Local Sherpa Direct Connect</title>
+  
+  <!-- Typography Tokens -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Core Stylesheet -->
+  <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ========================================================================
+       NAVIGATION HEADER (COMPACT LUXURY GLASSMORPHISM)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="brand-logo" href="#hero">
+        <svg class="brand-mountain-svg" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18">
+          <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+        </svg>
+        <span class="brand-title-text">NEPAL <span class="brand-accent-text">HIMALAYAS</span></span>
+        <span class="brand-status-dot"></span>
+      </a>
+
+      <nav class="main-nav">
+        <a class="nav-item-link" href="#peaks">Expeditions</a>
+        <a class="nav-item-link" href="#route-stepper">Route Intel</a>
+        <a class="nav-item-link" href="#calculator">Calculator</a>
+        <a class="nav-item-link" href="#sherpas">Sherpas</a>
+        <a class="nav-item-link" href="#agencies">Agencies</a>
+        <a class="nav-item-link" href="#safety">Safety &amp; Permits</a>
+        <a class="nav-item-link" href="https://hackathon-861a0.firebaseapp.com/" target="_blank">Our Services ↗</a>
+      </nav>
+
+      <button class="btn-book-nav btn-open-modal" data-peak="all">
+        <span>Connect Direct</span>
+        <span class="btn-icon-sm">→</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION: CINEMATIC 4K VIDEO BACKGROUND & SWITCHER
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-video-container">
+      <video autoplay="" class="hero-bg-video" id="heroBgVideo" loop="" muted="" playsinline="" poster="assets/images/07_hero_everest_panorama.jpg">
+        <source src="assets/videos/everest_lhotse_hero.mp4" type="video/mp4"/>
+      </video>
+      <div class="hero-gradient-overlay"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-left-content">
+        <div class="tech-badge">
+          <span class="status-pulse-gold"></span>
+          <span id="heroRotator">NEPAL HIMALAYAN EXPEDITIONS • DIRECT LOCAL CONNECT</span>
+        </div>
+
+        <div class="hero-bold-title-wrap">
+          <div aria-hidden="true" class="hero-ghost-back-text">HIMALAYAS</div>
+          <h1 class="hero-ultra-bold-title">
+            <span class="title-part-white">THE NEPAL <br/></span>
+            <span class="title-part-gradient">HIMALAYAS</span>
+          </h1>
+        </div>
+
+        <p class="hero-tagline">
+          Authoritative high-altitude mountain intelligence, comprehensive route dossiers, and 100% direct connections with certified native Sherpas and licensed Nepalese expedition agencies with zero commissions.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn-primary btn-open-modal" data-peak="everest">
+            <span>Connect with Local Sherpas</span>
+            <span class="btn-icon-sm">→</span>
+          </button>
+          <a class="btn-outline" href="#peaks">
+            <span>Explore 8,000m Summits</span>
+            <span class="btn-icon-sm">↓</span>
+          </a>
+        </div>
+
+        <!-- Video Switcher Controls -->
+        <div class="hero-video-switcher" style="margin-top: 2rem; display: flex; gap: 0.6rem; flex-wrap: wrap;">
+          <button class="filter-btn video-switch-btn active" data-peak="everest">Everest &amp; Lhotse</button>
+          <button class="filter-btn video-switch-btn" data-peak="k2">K2 Savage Mtn</button>
+          <button class="filter-btn video-switch-btn" data-peak="manaslu">Manaslu Summit</button>
+          <button class="filter-btn video-switch-btn" data-peak="amadablam">Ama Dablam</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 1: EXPEDITIONS & SUMMIT CATALOG (SEARCH & FILTERS)
+       ======================================================================== -->
+  <section class="slice-dark-main" id="peaks">
+    <div class="section-container">
+      
+      <div class="section-head-split">
+        <div>
+          <div class="tech-badge">Complete Mountain Catalog</div>
+          <h2 class="section-title">Himalayan Expeditions &amp; Summits</h2>
+          <p class="section-subtitle-p">
+            Explore route profiles, 4K live videos, technical crux dossiers, and connect directly with local leaders.
+          </p>
+        </div>
+      </div>
+
+      <!-- Search & Category Filters Bar -->
+      <div class="filter-bar-container" style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; background: rgba(255,255,255,0.03); padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+        <div class="filter-pills" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="filter-btn active" data-filter="all">All Summits &amp; Treks</button>
+          <button class="filter-btn" data-filter="8000m">8,000m Giants</button>
+          <button class="filter-btn" data-filter="training">6,000m Technical Peaks</button>
+          <button class="filter-btn" data-filter="trek">Luxury Treks</button>
+        </div>
+        <div class="search-box-wrap" style="position: relative; min-width: 260px;">
+          <input type="text" id="expeditionSearchInput" placeholder="Search peak, altitude, or route..." style="width: 100%; background: rgba(255,255,255,0.06); border: 1px solid var(--border-subtle); color: #fff; padding: 0.55rem 1rem; border-radius: 4px; font-size: 0.85rem; outline: none;"/>
+        </div>
+      </div>
+
+      <!-- Expeditions Grid -->
+      <div class="expeditions-grid" id="expeditionsGrid">
+        
+        <!-- Card 1: Everest & Lhotse Combo -->
+        <div class="exped-card" data-category="8000m" data-keywords="everest lhotse south col 8848 8516 summit nepal">
+          <div class="card-media-wrap">
+            <span class="card-grade-badge">8,848M / 8,516M</span>
+            <span class="card-live-tag">4K Video</span>
+            <div class="card-video-play-btn play-roster-vid" data-title="Everest &amp; Lhotse Dual Summit" data-video="assets/videos/everest_lhotse_hero.mp4" title="Play Fullscreen Video">▶</div>
+            <video autoplay="" loop="" muted="" playsinline="" poster="assets/images/06_everest_lhotse_peaks.jpg">
+              <source src="assets/videos/everest_lhotse_hero.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Everest &amp; Lhotse Dual Summit</h3>
+            <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.2rem;">
+              The world's highest dual traverse. Summit Everest (8,848.86m), descend to the South Col, and traverse directly into the Lhotse Couloir (8,516m).
+            </p>
+            <div class="card-foot">
+              <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between;">
+                <button class="btn-intel open-intel-btn" data-peak="everest-lhotse">View Dossier 📋</button>
+                <button class="btn-card-enquire btn-open-modal" data-peak="everest-lhotse">Connect Direct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Mount Everest Solo Summit -->
+        <div class="exped-card" data-category="8000m" data-keywords="everest sagarmatha south col 8848 summit nepal">
+          <div class="card-media-wrap">
+            <span class="card-grade-badge">8,848.86M</span>
+            <span class="card-live-tag">4K Video</span>
+            <div class="card-video-play-btn play-roster-vid" data-title="Mount Everest Summit Push" data-video="assets/videos/everest_summit_expedition.mp4" title="Play Fullscreen Video">▶</div>
+            <video autoplay="" loop="" muted="" playsinline="" poster="assets/images/09_sunrise_pyramid_summit.jpg">
+              <source src="assets/videos/everest_summit_expedition.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Mount Everest Summit</h3>
+            <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.2rem;">
+              The highest point on Earth. Complete technical navigation through the Khumbu Icefall, Western Cwm, Lhotse Face, and Hillary Step.
+            </p>
+            <div class="card-foot">
+              <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between;">
+                <button class="btn-intel open-intel-btn" data-peak="everest">View Dossier 📋</button>
+                <button class="btn-card-enquire btn-open-modal" data-peak="everest">Connect Direct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: K2 Savage Mountain -->
+        <div class="exped-card" data-category="8000m" data-keywords="k2 savage mountain 8611 abruzzi karakoram">
+          <div class="card-media-wrap">
+            <span class="card-grade-badge">8,611M</span>
+            <span class="card-live-tag">4K Video</span>
+            <div class="card-video-play-btn play-roster-vid" data-title="K2 Savage Mountain Expedition" data-video="assets/videos/k2_mountain_expedition.mp4" title="Play Fullscreen Video">▶</div>
+            <video autoplay="" loop="" muted="" playsinline="" poster="assets/images/12_k2_broad_peak.webp">
+              <source src="assets/videos/k2_mountain_expedition.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">K2 Savage Mountain Expedition</h3>
+            <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.2rem;">
+              The King of 8,000m peaks. Technical alpine climbing via House's Chimney, the Black Pyramid, and the infamous Bottleneck.
+            </p>
+            <div class="card-foot">
+              <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between;">
+                <button class="btn-intel open-intel-btn" data-peak="k2">View Dossier 📋</button>
+                <button class="btn-card-enquire btn-open-modal" data-peak="k2">Connect Direct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Manaslu True Summit -->
+        <div class="exped-card" data-category="8000m" data-keywords="manaslu 8163 gorkha spirit autumn summit nepal">
+          <div class="card-media-wrap">
+            <span class="card-grade-badge">8,163M</span>
+            <span class="card-live-tag">4K Video</span>
+            <div class="card-video-play-btn play-roster-vid" data-title="Manaslu Summit Expedition" data-video="assets/videos/manaslu_expedition.mp4" title="Play Fullscreen Video">▶</div>
+            <video autoplay="" loop="" muted="" playsinline="" poster="assets/images/14_himalayan_mountain_clouds.webp">
+              <source src="assets/videos/manaslu_expedition.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Manaslu True Summit</h3>
+            <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.2rem;">
+              The premier Autumn 8,000m peak. Magnificent snow ramps leading to the newly verified exposed knife-edge True Summit.
+            </p>
+            <div class="card-foot">
+              <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between;">
+                <button class="btn-intel open-intel-btn" data-peak="manaslu">View Dossier 📋</button>
+                <button class="btn-card-enquire btn-open-modal" data-peak="manaslu">Connect Direct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Ama Dablam Southwest Ridge -->
+        <div class="exped-card" data-category="training" data-keywords="ama dablam 6812 matterhorn khumbu technical ridge">
+          <div class="card-media-wrap">
+            <span class="card-grade-badge">6,812M</span>
+            <span class="card-live-tag">4K Video</span>
+            <div class="card-video-play-btn play-roster-vid" data-title="Ama Dablam Southwest Ridge" data-video="assets/videos/ama_dablam_expedition.mp4" title="Play Fullscreen Video">▶</div>
+            <video autoplay="" loop="" muted="" playsinline="" poster="assets/images/08_nimsdai_summit_sunbeams.jpg">
+              <source src="assets/videos/ama_dablam_expedition.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Ama Dablam Southwest Ridge</h3>
+            <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.2rem;">
+              The "Matterhorn of the Himalayas". Steep granite cracks (Yellow Tower), exposed mixed climbing, and breathtaking knife-edge snow crests.
+            </p>
+            <div class="card-foot">
+              <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between;">
+                <button class="btn-intel open-intel-btn" data-peak="amadablam">View Dossier 📋</button>
+                <button class="btn-card-enquire btn-open-modal" data-peak="amadablam">Connect Direct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Lobuche East Training Peak -->
+        <div class="exped-card" data-category="training" data-keywords="lobuche east 6119 acclimatization training peak khumbu">
+          <div class="card-media-wrap">
+            <span class="card-grade-badge">6,119M</span>
+            <span class="card-live-tag">4K Video</span>
+            <div class="card-video-play-btn play-roster-vid" data-title="Lobuche East Training Peak" data-video="assets/videos/everest_lhotse_hero.mp4" title="Play Fullscreen Video">▶</div>
+            <video autoplay="" loop="" muted="" playsinline="" poster="assets/images/04_lobuche_east_peak.webp">
+              <source src="assets/videos/everest_lhotse_hero.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Lobuche East Expedition</h3>
+            <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.2rem;">
+              The quintessential high-altitude acclimatization climb in the Khumbu. Fixed line jumar training with direct panoramas of Everest &amp; Nuptse.
+            </p>
+            <div class="card-foot">
+              <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between;">
+                <button class="btn-intel open-intel-btn" data-peak="lobuche">View Dossier 📋</button>
+                <button class="btn-card-enquire btn-open-modal" data-peak="lobuche">Connect Direct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Everest Base Camp Luxury Trek -->
+        <div class="exped-card" data-category="trek" data-keywords="everest base camp ebc trek kala patthar 5364 khumbu namche">
+          <div class="card-media-wrap">
+            <span class="card-grade-badge">5,364M</span>
+            <span class="card-live-tag">4K Video</span>
+            <div class="card-video-play-btn play-roster-vid" data-title="Everest Base Camp Luxury Trek" data-video="assets/videos/everest_summit_expedition.mp4" title="Play Fullscreen Video">▶</div>
+            <video autoplay="" loop="" muted="" playsinline="" poster="assets/images/19_everest_base_camp.webp">
+              <source src="assets/videos/everest_summit_expedition.mp4" type="video/mp4"/>
+            </video>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Everest Base Camp Trek</h3>
+            <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.5; margin-bottom: 1.2rem;">
+              The world's most famous trek. Walk through Sagarmatha National Park, Namche Bazaar, Tengboche Monastery, and stand beneath the Khumbu Icefall.
+            </p>
+            <div class="card-foot">
+              <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: space-between;">
+                <button class="btn-intel open-intel-btn" data-peak="ebc-trek">View Dossier 📋</button>
+                <button class="btn-card-enquire btn-open-modal" data-peak="ebc-trek">Connect Direct</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: EVEREST SUMMIT ROUTE & ELEVATION STEPPER
+       ======================================================================== -->
+  <section class="slice-dark-main" id="route-stepper" style="border-top: 1px solid var(--border-subtle);">
+    <div class="section-container">
+      
+      <div class="section-head-split">
+        <div>
+          <div class="tech-badge">Interactive Route Telemetry</div>
+          <h2 class="section-title">South Col Route &amp; Elevation Profile</h2>
+          <p class="section-subtitle-p">
+            Follow the stage-by-stage progression from Lukla (2,860m) to the summit of Mount Everest (8,848.86m).
+          </p>
+        </div>
+      </div>
+
+      <!-- Stepper Controls -->
+      <div class="route-stepper-bar" style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 1rem; margin-bottom: 2rem;">
+        <button class="step-btn active" data-step="lukla">1. Lukla (2,860m)</button>
+        <button class="step-btn" data-step="namche">2. Namche (3,440m)</button>
+        <button class="step-btn" data-step="ebc">3. EBC (5,364m)</button>
+        <button class="step-btn" data-step="icefall">4. Icefall &amp; C1 (6,065m)</button>
+        <button class="step-btn" data-step="cwm">5. Camp 2 ABC (6,400m)</button>
+        <button class="step-btn" data-step="lhotseface">6. Camp 3 (7,300m)</button>
+        <button class="step-btn" data-step="southcol">7. South Col (7,920m)</button>
+        <button class="step-btn" data-step="summit">8. Summit (8,848m)</button>
+      </div>
+
+      <!-- Stage Detail Display Card -->
+      <div class="stepper-stage-card" style="background: rgba(255,255,255,0.04); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 2.5rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center;">
+        <div>
+          <div style="font-family: var(--font-mono); color: var(--color-accent-gold); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5rem;">
+            ELEVATION: <span id="stageAltitudeNum" style="color: #fff; font-weight: 700; font-size: 1.1rem;">2,860 m</span>
+          </div>
+          <h3 id="stageTitle" style="font-family: var(--font-display); font-size: 2rem; color: #fff; margin-bottom: 1rem;">Lukla &amp; Phakding (Day 01 - 02)</h3>
+          <p id="stageDesc" style="color: var(--color-text-muted-dark); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.8rem;">
+            The iconic flight into Tenzing-Hillary Airport (Lukla) at 2,860m. The trek begins along the Dudh Kosi river, crossing suspension bridges draped with prayer flags into lush alpine forests.
+          </p>
+          <div id="stageChecklist" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; font-size: 0.85rem; color: #ddd;">
+            <div class="check-item"><span style="color: var(--color-accent-orange); font-weight: bold;">✓</span> Tenzing-Hillary Airport Arrival</div>
+            <div class="check-item"><span style="color: var(--color-accent-orange); font-weight: bold;">✓</span> Acclimatization Walk (3-4 hrs)</div>
+            <div class="check-item"><span style="color: var(--color-accent-orange); font-weight: bold;">✓</span> Porter &amp; Yak Caravan Setup</div>
+            <div class="check-item"><span style="color: var(--color-accent-orange); font-weight: bold;">✓</span> Altitude Check: 2,860m</div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <img id="stageImg1" src="assets/images/18_annapurna_base_camp.jpg" alt="Stage Image 1" style="border-radius: 6px; width: 100%; height: 220px; object-fit: cover; border: 1px solid var(--border-subtle);"/>
+          <img id="stageImg2" src="assets/images/14_himalayan_mountain_clouds.webp" alt="Stage Image 2" style="border-radius: 6px; width: 100%; height: 220px; object-fit: cover; border: 1px solid var(--border-subtle);"/>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: ACCLIMATIZATION & EXPEDITION CALCULATOR
+       ======================================================================== -->
+  <section class="slice-dark-main" id="calculator" style="border-top: 1px solid var(--border-subtle);">
+    <div class="section-container">
+      
+      <div class="section-head-split">
+        <div>
+          <div class="tech-badge">Expedition Logistics Engine</div>
+          <h2 class="section-title">Interactive Expedition Calculator</h2>
+          <p class="section-subtitle-p">
+            Calculate estimated turnaround days, oxygen demands, required gear weight, and historical success probability.
+          </p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.4fr; gap: 2.5rem; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 2.5rem;">
+        <div>
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label" for="calcPeak">Select Target Peak / Route</label>
+            <select class="form-select" id="calcPeak" style="width: 100%; padding: 0.75rem; background: rgba(0,0,0,0.4); border: 1px solid var(--border-subtle); color: #fff; border-radius: 4px;">
+              <option value="everest-lhotse">Everest &amp; Lhotse Dual Summit (8,848m / 8,516m)</option>
+              <option value="everest" selected>Mount Everest Solo Summit (8,848.86m)</option>
+              <option value="k2">K2 Savage Mountain (8,611m)</option>
+              <option value="manaslu">Manaslu True Summit (8,163m)</option>
+              <option value="amadablam">Ama Dablam Technical Ridge (6,812m)</option>
+              <option value="lobuche">Lobuche East Training Peak (6,119m)</option>
+              <option value="ebc-trek">Everest Base Camp Trek (5,364m)</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label" for="calcExp">Your High-Altitude Experience Level</label>
+            <select class="form-select" id="calcExp" style="width: 100%; padding: 0.75rem; background: rgba(0,0,0,0.4); border: 1px solid var(--border-subtle); color: #fff; border-radius: 4px;">
+              <option value="beginner">First 8000er / Pre-Summit Alpine Hiker</option>
+              <option value="experienced" selected>Experienced Climber (Prior 6,500m+ summit)</option>
+              <option value="elite">Elite Alpine Master (Prior 8,000m summits)</option>
+            </select>
+          </div>
+
+          <button class="btn-primary btn-open-modal" data-peak="all" style="width: 100%; justify-content: center; margin-top: 1rem;">
+            Request Verified Expedition Quote →
+          </button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
+          <div class="intel-spec-card" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: 6px;">
+            <h5 style="color: var(--color-text-muted-dark); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Expedition Duration</h5>
+            <p id="calcDurationVal" style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: var(--font-mono); margin-top: 0.4rem;">52 Days</p>
+            <span style="font-size: 0.78rem; color: #888;">Including 3 acclimatization rotations</span>
+          </div>
+
+          <div class="intel-spec-card" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: 6px;">
+            <h5 style="color: var(--color-text-muted-dark); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Oxygen Allocation</h5>
+            <p id="calcOxygenVal" style="font-size: 1.8rem; font-weight: 700; color: var(--color-accent-orange); font-family: var(--font-mono); margin-top: 0.4rem;">6-8 Cylinders</p>
+            <span style="font-size: 0.78rem; color: #888;">TopOut Mask + Russian Poseidon</span>
+          </div>
+
+          <div class="intel-spec-card" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: 6px;">
+            <h5 style="color: var(--color-text-muted-dark); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Base Personal Gear</h5>
+            <p id="calcGearVal" style="font-size: 1.8rem; font-weight: 700; color: #fff; font-family: var(--font-mono); margin-top: 0.4rem;">28 kg</p>
+            <span style="font-size: 0.78rem; color: #888;">8000m Down Suit &amp; Triple Boots</span>
+          </div>
+
+          <div class="intel-spec-card" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: 6px;">
+            <h5 style="color: var(--color-text-muted-dark); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Historical Success Rate</h5>
+            <p id="calcSuccessVal" style="font-size: 1.8rem; font-weight: 700; color: var(--color-accent-gold); font-family: var(--font-mono); margin-top: 0.4rem;">96%</p>
+            <span style="font-size: 0.78rem; color: #888;">With 1:1 Certified Native Sherpa</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4: VERIFIED LOCAL SHERPA GUIDES DIRECTORY
+       ======================================================================== -->
+  <section class="slice-dark-main" id="sherpas" style="border-top: 1px solid var(--border-subtle);">
+    <div class="section-container">
+      <div class="section-head-split">
+        <div>
+          <div class="tech-badge">Direct Guide Connection • 0% Commissions</div>
+          <h2 class="section-title">Verified Local Sherpa Mountain Guides</h2>
+          <p class="section-subtitle-p">
+            Connect directly with IFMGA/UIAGM &amp; NNMGA certified Nepali mountain leaders. 100% direct wages with zero intermediary cuts.
+          </p>
+        </div>
+      </div>
+
+      <div class="sherpas-directory-grid">
+        
+        <!-- Sherpa 1: Pasang Dawa Sherpa -->
+        <div class="sherpa-profile-card">
+          <div class="sherpa-photo-header">
+            <span class="badge-verified-sherpa">✓ NNMGA Master Guide</span>
+            <img alt="Pasang Dawa Sherpa" src="assets/images/10_leader_nimsdai_purja.jpg"/>
+          </div>
+          <div class="sherpa-info-body">
+            <span class="sherpa-valley-tag">Khumbu • Pangboche</span>
+            <h3 class="sherpa-name-title">Pasang Dawa Sherpa</h3>
+            <p class="sherpa-bio-text">
+              27-time Mount Everest summit master and Khumbu Icefall lead route fixer. Expert in weather analysis, South Col oxygen management, and high-altitude emergency protocols.
+            </p>
+            <div class="sherpa-stats-row">
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">Everest Summits</span>
+                <span class="sherpa-stat-val">27 Times</span>
+              </div>
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">8,000m Total</span>
+                <span class="sherpa-stat-val">34 Summits</span>
+              </div>
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">Direct Rate</span>
+                <span class="sherpa-stat-val" style="color: var(--color-accent-orange);">$250 / Day</span>
+              </div>
+            </div>
+            <button class="btn-primary btn-open-modal" data-peak="everest" style="width: 100%; justify-content: center; margin-top: 1rem;">
+              Connect With Pasang →
+            </button>
+          </div>
+        </div>
+
+        <!-- Sherpa 2: Mingma David Sherpa -->
+        <div class="sherpa-profile-card">
+          <div class="sherpa-photo-header">
+            <span class="badge-verified-sherpa">✓ IFMGA / UIAGM Guide</span>
+            <img alt="Mingma David Sherpa" src="assets/images/13_leader_mingma_david_sherpa.webp"/>
+          </div>
+          <div class="sherpa-info-body">
+            <span class="sherpa-valley-tag">Makalu • Taplejung</span>
+            <h3 class="sherpa-name-title">Mingma David Sherpa</h3>
+            <p class="sherpa-bio-text">
+              Youngest person to summit all 14 8,000m peaks and historic K2 Winter summit leader. Specialist in technical rock towers, couloirs, and high-speed traverses.
+            </p>
+            <div class="sherpa-stats-row">
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">14x 8,000ers</span>
+                <span class="sherpa-stat-val">All 14 Done</span>
+              </div>
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">K2 Summits</span>
+                <span class="sherpa-stat-val">6 Times</span>
+              </div>
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">Status</span>
+                <span class="sherpa-stat-val" style="color: var(--color-accent-gold);">Lead Sirdar</span>
+              </div>
+            </div>
+            <button class="btn-primary btn-open-modal" data-peak="k2" style="width: 100%; justify-content: center; margin-top: 1rem;">
+              Connect With Mingma →
+            </button>
+          </div>
+        </div>
+
+        <!-- Sherpa 3: Dawa Yangzum Sherpa -->
+        <div class="sherpa-profile-card">
+          <div class="sherpa-photo-header">
+            <span class="badge-verified-sherpa">✓ 1st Nepali Female IFMGA</span>
+            <img alt="Dawa Yangzum Sherpa" src="assets/images/02_leader_nimsdai_purja.webp"/>
+          </div>
+          <div class="sherpa-info-body">
+            <span class="sherpa-valley-tag">Rolwaling Valley</span>
+            <h3 class="sherpa-name-title">Dawa Yangzum Sherpa</h3>
+            <p class="sherpa-bio-text">
+              Pioneering high-altitude climber and first Nepali woman to earn the prestigious international IFMGA/UIAGM certification. Summited Everest, K2, Makalu, and Annapurna I.
+            </p>
+            <div class="sherpa-stats-row">
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">Everest Summits</span>
+                <span class="sherpa-stat-val">4 Times</span>
+              </div>
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">K2 Summited</span>
+                <span class="sherpa-stat-val">Yes (2014)</span>
+              </div>
+              <div class="sherpa-stat-box">
+                <span class="sherpa-stat-key">Specialty</span>
+                <span class="sherpa-stat-val" style="color: var(--color-accent-orange);">Alpine / 8000m</span>
+              </div>
+            </div>
+            <button class="btn-primary btn-open-modal" data-peak="everest" style="width: 100%; justify-content: center; margin-top: 1rem;">
+              Connect With Dawa →
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 5: VERIFIED LOCAL EXPEDITION AGENCIES DIRECTORY
+       ======================================================================== -->
+  <section class="slice-dark-main" id="agencies" style="border-top: 1px solid var(--border-subtle);">
+    <div class="section-container">
+      <div class="section-head-split">
+        <div>
+          <div class="tech-badge">Government Licensed Operators</div>
+          <h2 class="section-title">Verified Local Nepalese Expedition Agencies</h2>
+          <p class="section-subtitle-p">
+            Licensed by the Nepal Ministry of Culture, Tourism and Civil Aviation and Nepal Mountaineering Association (NMA).
+          </p>
+        </div>
+      </div>
+
+      <div class="agencies-directory-grid">
+        
+        <!-- Agency 1 -->
+        <div class="agency-profile-card">
+          <div class="agency-card-body">
+            <span class="agency-lic-tag">Govt Lic #8492/068 • Kathmandu HQ</span>
+            <h3 class="agency-name">Himalayan Masters Expeditions</h3>
+            <p class="sherpa-bio-text">
+              100% Sherpa-operated agency specialized in 8,000m full logistics, South Col fixed rope contracts, luxury Everest Base Camp domes, and oxygen cylinder management.
+            </p>
+            <div class="agency-specialties">
+              <span class="spec-pill">8,000m Expeditions</span>
+              <span class="spec-pill">EBC Helicopter Medevac</span>
+              <span class="spec-pill">Porters Fair Wage</span>
+            </div>
+            <button class="btn-card-enquire btn-open-modal" data-peak="everest-lhotse" style="width: 100%; text-align: center; margin-top: 1.5rem;">
+              Request Direct Agency Quote →
+            </button>
+          </div>
+        </div>
+
+        <!-- Agency 2 -->
+        <div class="agency-profile-card">
+          <div class="agency-card-body">
+            <span class="agency-lic-tag">Govt Lic #1120/055 • Namche Bazaar HQ</span>
+            <h3 class="agency-name">Khumbu Alpine Operations</h3>
+            <p class="sherpa-bio-text">
+              Native Namche Bazaar operational base. Complete high-altitude porter networks, Lobuche East &amp; Ama Dablam base camps, and satellite communication infrastructure.
+            </p>
+            <div class="agency-specialties">
+              <span class="spec-pill">Ama Dablam &amp; Lobuche</span>
+              <span class="spec-pill">Oxygen Cylinder Refills</span>
+              <span class="spec-pill">1:1 Sherpa Match</span>
+            </div>
+            <button class="btn-card-enquire btn-open-modal" data-peak="amadablam" style="width: 100%; text-align: center; margin-top: 1.5rem;">
+              Request Direct Agency Quote →
+            </button>
+          </div>
+        </div>
+
+        <!-- Agency 3 -->
+        <div class="agency-profile-card">
+          <div class="agency-card-body">
+            <span class="agency-lic-tag">Govt Lic #5391/072 • Pokhara / Thamel</span>
+            <h3 class="agency-name">Annapurna &amp; Manaslu Direct</h3>
+            <p class="sherpa-bio-text">
+              Specialized regional agency for Manaslu True Summit, Annapurna Circuit &amp; Sanctuary Treks, and Dhaulagiri expedition logistics and environmental waste disposal.
+            </p>
+            <div class="agency-specialties">
+              <span class="spec-pill">Manaslu Autumn Summit</span>
+              <span class="spec-pill">Annapurna Base Camp</span>
+              <span class="spec-pill">TIMS Permits</span>
+            </div>
+            <button class="btn-card-enquire btn-open-modal" data-peak="manaslu" style="width: 100%; text-align: center; margin-top: 1.5rem;">
+              Request Direct Agency Quote →
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Direct Connect Banner -->
+      <div class="direct-connect-banner" style="margin-top: 3.5rem; background: linear-gradient(135deg, rgba(212,106,46,0.15) 0%, rgba(154,123,63,0.1) 100%); border: 1px solid var(--border-glow); border-radius: 8px; padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap;">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-bottom: 0.4rem;">
+            Need Help Matching With a Local Sherpa or Agency?
+          </h3>
+          <p style="color: #ccc; font-size: 0.95rem;">
+            Submit your climbing or trekking objectives. We connect you directly with 3 verified local Nepali operators within 24 hours at zero commission.
+          </p>
+        </div>
+        <button class="btn-primary btn-open-modal" data-peak="all">
+          <span>Get Free Local Match</span>
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 6: SAFETY PROTOCOLS, PERMITS & EMERGENCY LOGISTICS
+       ======================================================================== -->
+  <section class="slice-dark-main" id="safety" style="border-top: 1px solid var(--border-subtle);">
+    <div class="section-container">
+      <div class="section-head-split">
+        <div>
+          <div class="tech-badge">Himalayan Mountain Safety</div>
+          <h2 class="section-title">Safety Protocols, Permits &amp; Medevac</h2>
+          <p class="section-subtitle-p">
+            Comprehensive operational guidelines for permits, satellite comms, hyperbaric chambers, and helicopter rescues.
+          </p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+        
+        <div class="intel-spec-card" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 1.8rem; border-radius: 6px;">
+          <h5 style="color: var(--color-accent-orange); font-size: 1rem; margin-bottom: 0.5rem;">🚁 Helicopter Rescue Protocols</h5>
+          <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.6;">
+            High-altitude B3 Airbus helicopters operating up to Camp 2 (6,400m) in weather-permissible conditions. Requires active emergency medical evacuation insurance.
+          </p>
+        </div>
+
+        <div class="intel-spec-card" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 1.8rem; border-radius: 6px;">
+          <h5 style="color: var(--color-accent-gold); font-size: 1rem; margin-bottom: 0.5rem;">📑 Department of Tourism Permits</h5>
+          <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.6;">
+            Royalty fee handling for Everest ($11,000 spring rate), Lhotse, and Manaslu, alongside Sagarmatha National Park entry, TIMS, and Khumbu Pasang Lhamu local permits.
+          </p>
+        </div>
+
+        <div class="intel-spec-card" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 1.8rem; border-radius: 6px;">
+          <h5 style="color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">📡 Satellite &amp; Radio Tracking</h5>
+          <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.6;">
+            Continuous VHF radio channels between base camp and all high camps, supplemented by Garmin inReach satellite SOS trackers on every lead Sherpa guide.
+          </p>
+        </div>
+
+        <div class="intel-spec-card" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); padding: 1.8rem; border-radius: 6px;">
+          <h5 style="color: var(--color-accent-orange); font-size: 1rem; margin-bottom: 0.5rem;">🫁 Gamow Bags &amp; Medical O2</h5>
+          <p style="color: var(--color-text-muted-dark); font-size: 0.88rem; line-height: 1.6;">
+            Base camps are equipped with portable hyperbaric Gamow chambers, pulse oximeters, dexamethasone, and medical-grade oxygen reserve tanks.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SUMMIT INTEL & DETAILED TECHNICAL BRIEFING MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="summitIntelModal">
+    <div class="intel-modal-card">
+      <button class="modal-close-btn" id="closeIntelModalBtn">×</button>
+      <div class="tech-badge" id="intelBadge">TECHNICAL BRIEFING • NEPAL HIMALAYAS</div>
+      <h3 id="intelTitle" style="font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 0.5rem;">Everest &amp; Lhotse</h3>
+      <p id="intelOverview" style="color: var(--color-text-muted-dark); font-size: 0.95rem; line-height: 1.6;">
+        Comprehensive technical climbing dossier, elevation waypoints, and oxygen strategy.
+      </p>
+
+      <!-- Key Metrics Grid -->
+      <div class="intel-grid" id="intelMetricsGrid" style="margin-top: 1.5rem;">
+        <div class="intel-spec-card">
+          <h5>Elevation &amp; Prominence</h5>
+          <p id="intelElevation">8,848.86 m (29,031.7 ft)</p>
+        </div>
+        <div class="intel-spec-card">
+          <h5>Crux &amp; Key Hazards</h5>
+          <p id="intelCrux">Khumbu Icefall, Lhotse Face, Hillary Step</p>
+        </div>
+        <div class="intel-spec-card">
+          <h5>Oxygen Strategy</h5>
+          <p id="intelOxygen">4L/min flow above 7,300m (Camp 3)</p>
+        </div>
+        <div class="intel-spec-card">
+          <h5>Prerequisites</h5>
+          <p id="intelPrereq">Prior 6,500m+ summit (e.g. Lobuche / Ama Dablam)</p>
+        </div>
+      </div>
+
+      <!-- Camp-by-Camp Elevation Timeline -->
+      <h4 style="font-family: var(--font-display); font-size: 1.3rem; margin-top: 1.8rem; margin-bottom: 0.8rem;">Route &amp; Camp Profile</h4>
+      <div class="intel-camps-timeline" id="intelCampsTimeline">
+        <!-- Injected dynamically by JS -->
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.5rem;">
+        <button class="btn-primary btn-open-modal" data-peak="everest-lhotse" id="intelBookBtn">Connect With Local Agency →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       DIRECT SHERPA & LOCAL AGENCY CONNECTION MODAL
+       ======================================================================== -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn">×</button>
+      <div class="tech-badge" style="margin-bottom: 0.6rem;">Direct Connect • 0% Commission</div>
+      <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 0.4rem;">Connect With Local Sherpas &amp; Agencies</h3>
+      <p style="color: var(--color-text-muted-dark); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        Tell us about your climbing or trekking plan. We connect you directly with verified local Sherpa guides and Kathmandu agencies.
+      </p>
+
+      <form id="bookingForm">
+        <div class="form-group">
+          <label class="form-label" for="modalPeakSelect">Target Mountain or Trek</label>
+          <select class="form-select" id="modalPeakSelect">
+            <option value="everest-lhotse">Everest &amp; Lhotse Combo (8,848m / 8,516m)</option>
+            <option value="everest">Mount Everest Summit (8,848.86m)</option>
+            <option value="k2">K2 Savage Mountain (8,611m)</option>
+            <option value="manaslu">Manaslu True Summit (8,163m)</option>
+            <option value="amadablam">Ama Dablam Technical Ridge (6,812m)</option>
+            <option value="lobuche">Lobuche East Peak (6,119m)</option>
+            <option value="ebc-trek">Everest Base Camp Trek (5,364m)</option>
+            <option value="annapurna">Annapurna Sanctuary &amp; Circuit Trek</option>
+            <option value="other">Other Nepal Himalayan Peak / Trek</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="serviceTypeSelect">Required Local Service</label>
+          <select class="form-select" id="serviceTypeSelect">
+            <option value="guide-only">1:1 Private Sherpa Guide (Summit Master)</option>
+            <option value="full-agency">Full Agency Package (Logistics, Base Camp, Permits &amp; O2)</option>
+            <option value="trek-porter">Trekking Guide &amp; Porter Caravan</option>
+            <option value="custom-quote">Custom Expedition Request</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clientName">Your Full Name</label>
+          <input class="form-input" id="clientName" placeholder="e.g. Alexander Cole" required="" type="text"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clientEmail">Email / WhatsApp Number</label>
+          <input class="form-input" id="clientEmail" placeholder="email@domain.com or +1 555-0199" required="" type="text"/>
+        </div>
+
+        <button class="btn-primary" style="width: 100%; justify-content: center; margin-top: 0.8rem;" type="submit">
+          Request Direct Local Connection (Free)
+        </button>
+
+        <div style="text-align: center; margin-top: 1rem;">
+          <span style="color: var(--color-text-muted-dark); font-size: 0.85rem; display: block; margin-bottom: 0.5rem;">Or connect instantly via WhatsApp:</span>
+          <a href="https://wa.me/9779804833752" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background: #25D366; color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; width: 100%; transition: opacity 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </form>
+
+      <div id="bookingSuccess" style="display: none; text-align: center; padding: 2rem 0;">
+        <div style="font-size: 2.5rem; color: var(--color-accent-orange); margin-bottom: 0.8rem;">✓</div>
+        <h4 style="font-family: var(--font-display); font-size: 1.6rem;">Connection Request Dispatched</h4>
+        <p style="color: var(--color-text-muted-dark); font-size: 0.9rem; margin-top: 0.5rem;">
+          Your request has been forwarded directly to verified local Sherpas and licensed Nepalese agencies. You will receive direct quotes via email/WhatsApp within 24 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MEDIA LIGHTBOX MODAL
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close" id="lightboxClose">×</button>
+      <video class="lightbox-video-elem" controls="" id="lightboxVideo" style="display: none;"></video>
+      <img alt="Enlarged view" class="lightbox-img-elem" id="lightboxImg" src="" style="display: none;"/>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <div class="brand-logo">
+          <span>NEPAL </span><span>HIMALAYAS</span>
+        </div>
+        <p>
+          Dedicated to providing authoritative Himalayan peak intelligence and connecting international mountaineers directly with certified native Sherpas and licensed Nepalese expedition agencies.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Expedition Summits</h4>
+        <div class="footer-links-list">
+          <a href="#peaks" class="open-intel-btn" data-peak="everest">Mount Everest (8,848m)</a>
+          <a href="#peaks" class="open-intel-btn" data-peak="everest-lhotse">Lhotse Traverse (8,516m)</a>
+          <a href="#peaks" class="open-intel-btn" data-peak="k2">K2 Savage Mountain (8,611m)</a>
+          <a href="#peaks" class="open-intel-btn" data-peak="manaslu">Manaslu True Summit (8,163m)</a>
+          <a href="#peaks" class="open-intel-btn" data-peak="amadablam">Ama Dablam (6,812m)</a>
+          <a href="#peaks" class="open-intel-btn" data-peak="lobuche">Lobuche East (6,119m)</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Connect</h4>
+        <div class="footer-links-list">
+          <a href="#sherpas">Verified Local Sherpas</a>
+          <a href="#agencies">Licensed Local Agencies</a>
+          <a href="#safety">Safety &amp; Helicopter Medevac</a>
+          <a href="#calculator">Expedition Calculator</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Online Service Portal</h4>
+        <div class="emergency-box">
+          <h5>Services &amp; Custom Itineraries</h5>
+          <a href="https://hackathon-861a0.firebaseapp.com/" target="_blank" style="color: var(--color-accent-orange); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 0.5rem;">
+            Visit Service Portal ↗
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Nepal Himalayas Mountain Portal • Direct Sherpa Connection</span>
+      <span>0% Middleman Fees • 100% Direct Fair Wage to Local Sherpas</span>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript Engine -->
+  <script src="js/main.js"></script>
+</body>
+</html>
